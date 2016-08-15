@@ -81,7 +81,7 @@ export default class Frontpage extends React.Component {
     })
 
     // const url = 'https://api.grassroots.com/grant/request'
-    const url = 'http://localhost:3000/grant/request'
+    const url = 'http://localhost:3000/grant'
 
     return fetch(url, {
       method: 'POST',
@@ -89,7 +89,7 @@ export default class Frontpage extends React.Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        date,
+        date: date.format('DD/MM/YYYY'),
         name,
         email,
         phone,
@@ -140,7 +140,7 @@ export default class Frontpage extends React.Component {
       <div className={s.container}>
         <div className={s.content}>
           <div className={s.labelContainer}>
-            <div className={s.label} >Contact</div>
+            <div className={s.label}>Contact</div>
           </div>
 
           <input
