@@ -51,12 +51,12 @@ export default class Frontpage extends React.Component {
       <div className={s.container}>
         <div className={s.firstContainer}
           style={{
-            backgroundImage: `url("${require('../img/frontimg.png')}")`
+            backgroundImage: `url("${require('../img/grassroots_photo.jpg')}")`
           }}>
           <div className={s.wrapper}>
-            <img className={s.logo} src=""/>
-            <div className={s.headline}>GETTING A GRANT FOR AN EVENT IS HARD </div>
-            <div className={s.slogan}>We make that process much more simple...</div>
+            <img className={s.logo} src={require('../img/tcf.png')}/>
+            <div className={s.headline}>PLANNING A COMMUNITY EVENT?</div>
+            <div className={s.slogan}>We enable community builders by helping out with the money.</div>
             <Link className={s.tryButton}
               style={{marginTop:'40px'}}
               to='/grants'>
@@ -68,13 +68,13 @@ export default class Frontpage extends React.Component {
           <div className={s.wrapper}>
             <div className={s.showcaseContainer}>
               <div className={s.showcaseLeft}>
-                <div className={s.showcaseHeadline}>WHAT IS IT</div>
-                <div className={s.showcaseText}>The grassroots fund is a fund to help you raise money to host your first community event.</div>
-                <div className={s.showcaseText}>With a transparent grant process it is easier than ever to bootstrap an event, where everyone can apply who wants to host a startup or a tech related event.</div>
-                <div className={s.showcaseText}>By working with partners from both the private sector and the government we are able to pool togeather resources so you don't have to.</div>
+                <div className={s.showcaseHeadline}>WHAT IS IT?</div>
+                <div className={s.showcaseText}>The Community Fund helps community builders plan events around their passion.</div>
+                <div className={s.showcaseText}>We're here to enable the tech and startup community grow closer and better, by making events, meetups, and other initiatives easier to execute.</div>
+                <div className={s.showcaseText}>Our partners provide funding, experience, and connections to make your event a complete success.</div>
               </div>
               <div className={s.showcaseRight}>
-                <img className={s.phone} src={require('../img/phone@2x.png')}/>
+                <img className={s.hands} src={require('../img/community_hands.png')}/>
               </div>
             </div>
           </div>
@@ -82,14 +82,35 @@ export default class Frontpage extends React.Component {
         <div className={s.thirdContainer}>
           <Parallax bgImage={require('../img/lyingimg.png')} strength={200} className={s.parallax}>
             <div className={s.testemonyContainer}>
-              <div className={s.testimonyHeadline}>WE COULD BE LYING BUT OUR CLIENTS WON'T</div>
+              <div className={s.testimonyHeadline}>WE COULDN'T DO THIS WITHOUT OUR PARTNERS</div>
             </div>
           </Parallax>
         </div>
         <div className={s.fourthContainer}>
           <div className={s.wrapper}>
             <div className={s.testimonyContainer}>
-              Show partners
+              <div className={s.clientBox}>
+                <div className={s.clientInfo}>
+                  <div className={s.clientName}>TEMPO</div>
+                    <div className={s.clientTitle}>Founding Partner</div>
+                      <div className={s.clientText}>Tempo is an Icelandic company that builds productivity software</div></div>
+              </div>
+              <div className={s.clientImageContainer}>
+                <img className={s.clientImage} src={require('../img/tempo.png')} />
+              </div>
+
+            </div>
+            <div className={s.testimonyContainer}>
+              <div className={s.clientBox}>
+                <div className={s.clientInfo}>
+                  <div className={s.clientName}>BERINGER FINANCE</div>
+                    <div className={s.clientTitle}>Founding Partner</div>
+                      <div className={s.clientText}>Beringer Finance is the biggest investment bank focused on tech in the Nordics</div></div>
+              </div>
+              <div className={s.clientImageContainer}>
+                <img className={s.clientImage} src={require('../img/beringer.png')} />
+              </div>
+
             </div>
             <div className={s.calculatorContainer}>
               <div className={`${s.calculatorText} ${s.calculatorTextUpper}`} >
